@@ -1,0 +1,699 @@
+
+@font-face{
+  font-family: Changa;
+  src: url(/NewBiz/Fonts/Changa-VariableFont_wght.ttf);
+}
+body {
+  background: #fff;
+  color: #444;
+}
+
+a {
+  color: #557A46;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color:#557A46;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Changa";
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #557A46;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #7A9D54;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  height: 80px;
+  z-index: 997;
+  transition: all 0.5s;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+  float: left;
+}
+
+#header.header-scrolled {
+  height:50px;
+}
+
+#header .logo h1 {
+  font-size: 22px;
+  font-weight: 700;
+  float: left;
+  padding-top: 21px;
+  padding-right: 11px;
+  font-family: "Changa";
+}
+
+@media (max-width: 991px) {
+  #header .logo h1 {
+    font-size: 15px;
+  }
+}
+
+#header .logo h1 a,
+#header .logo h1 a:hover {
+  color: #8C3333;
+  text-decoration: none;
+}
+
+#header .logo img {
+  padding: 0;
+  height: 55px;
+  padding-top: 8px;
+
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family:"Changa";
+  font-size: 15px;
+  color: #7A9D54;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #3C3C3C;
+}
+
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #283d50;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(23, 35, 46, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #557A46;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #557A46;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  position: relative;
+  background: url("../pic/Untitled\ design\ \(1\).png") center bottom no-repeat;
+  background-size: cover;
+  padding: 200px 0 120px 0;
+}
+
+@media (max-width: 991px) {
+  #hero {
+    padding: 140px 0 60px 0;
+  }
+}
+
+@media (max-width: 574px) {
+  #hero {
+    padding: 100px 0 20px 0;
+  }
+}
+
+#hero .hero-img {
+  width: 30%;
+  float: right;
+}
+
+@media (max-width: 991px) {
+  #hero .hero-img {
+    width: 40%;
+    float: none;
+    margin: 0 auto auto auto;
+  }
+}
+
+#hero .hero-info {
+  width: 70%;
+  float: left;
+  padding-top: 92px;
+  font-size: 22px;
+}
+
+@media (max-width: 991px) {
+  #hero .hero-info {
+    width: 30%;
+    float: none;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  #hero .hero-info {
+    width: 100%;
+  }
+}
+
+#hero .hero-info h2 {
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 35px;
+  font-weight:300;
+  text-align: center;
+  font-family: "Changa";
+}
+
+
+@media (max-width: 767px) {
+  #hero .hero-info h2 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+section {
+  overflow: hidden;
+}
+
+/* Sections Header
+--------------------------------*/
+.section-header h3 {
+  font-size: 40px;
+  color: #8C3333;
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+  font-family: "Changa";
+}
+
+.section-header p {
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
+  font-weight: 300;
+  padding-bottom: 60px;
+  color: #3C3C3C;
+  width: 50%;
+  font-family: "Changa";
+}
+
+@media (max-width: 767px) {
+  .section-header p {
+    width: 100%;
+  }
+}
+
+/* Section with background
+--------------------------------*/
+.section-bg {
+  background: #ecf5ff;
+}
+
+
+/* About Us Section
+--------------------------------*/
+#about {
+  background: #fff;
+  padding: 60px 0;
+}
+@media (max-width: 991px) {
+  #about .about-container .background img{
+   width:200px;
+  
+
+  }}
+#about .about-container .background img{
+  margin-right: 90px;
+}
+#about .about-container .background {
+  margin: 20px 0;
+}
+
+#about .about-container .content {
+  background: #fff;
+}
+
+#about .about-container .title {
+  color: #557A46;
+  font-weight: 700;
+  font-size: 32px;
+  font-family: "Changa";
+}
+
+#about .about-container p {
+  color:#3C3C3C;
+  margin-bottom: 90px;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Changa";
+}
+
+#about .about-container p:last-child {
+  margin-bottom: 0;
+}
+
+#about .about-container .icon-box {
+  background: #fff;
+  background-size: cover;
+  padding: 0 0 75px 0;
+}
+
+#about .about-container .icon-box .icon {
+  float: right;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+#about .about-container .icon-box .icon:hover{
+  background: url(/NewBiz/assets/pic/g1.png);
+}
+
+
+
+#about .about-container .icon-box .title {
+  margin-left: 80px;
+  margin-right: 90px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+#about .about-container .icon-box .title a {
+  color: #557A46;
+}
+
+#about .about-container .icon-box .description {
+  margin-left: 80px;
+  margin-right: 90px;
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Changa";
+  color: #3C3C3C;
+}
+
+#about .about-extra {
+  padding-top: 60px;
+}
+
+#about .about-extra h4 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #557A46;
+  font-family: "Changa";
+  
+}
+
+/* Services Section
+--------------------------------*/
+#services {
+  padding: 60px 0 40px 0;
+  box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  background: #CAD0AA;
+}
+
+#services .box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 0 10px 40px 10px;
+  background:#F0F0F0;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+#services .box:hover {
+  transform: translateY(-5px);
+}
+
+#services .icon {
+  position: absolute;
+  left: -2px;
+  top: calc(50% - 62px);
+  margin-left: 10px;
+  text-justify: auto;
+
+}
+
+#services .title {
+  margin-left:100px;
+  font-weight: 900;
+  font-family: "Changa"; 
+  margin-bottom: 18px;
+  font-size: 18px;
+}
+
+#services .title a {
+  color: #111;
+}
+
+#services .box:hover .title a {
+  color: #8C3333;
+}
+
+#services .description {
+  font-family: "Changa";
+  font-weight: 800;
+  font-size: 14px;
+  margin-left: 102px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+/* Clients Section
+--------------------------------*/
+#clients {
+
+  box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding-top: 60px;
+
+}
+
+#clients .clients-wrap {
+  border-top: 1px solid #7A9D54;
+  border-left: 1px solid #7A9D54;
+  margin-bottom: 30px;
+}
+
+#clients .client-logo {
+  padding: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid#7A9D54;
+  border-bottom: 1px solid #7A9D54;
+  overflow: hidden;
+  background: #fff;
+  height: 160px;
+}
+
+#clients .client-logo:hover img {
+  transform: scale(1.2);
+}
+
+#clients img {
+  transition: all 0.4s ease-in-out;
+}
+
+
+
+/* Testimonials Section
+--------------------------------*/
+#testimonials {
+  padding: 60px 0;
+  box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  background-color: #CAD0AA;
+}
+
+#testimonials .section-header {
+  margin-bottom: 40px;
+}
+
+#testimonials .testimonials-carousel,
+#testimonials .testimonials-slider {
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  #testimonials .testimonial-item {
+    text-align: center;
+  }
+}
+
+#testimonials .testimonial-item .testimonial-img {
+  width: 120px;
+  float: left;
+}
+
+@media (max-width: 767px) {
+  #testimonials .testimonial-item .testimonial-img {
+    float: none;
+    margin: auto;
+  }
+}
+
+#testimonials .testimonial-item h3 {
+  font-size: 20px;
+  font-family: "Changa";
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #111;
+  margin-left: 140px;
+}
+
+#testimonials .testimonial-item h4 {
+  font-size: 14px;
+  font-family: "Changa";
+  font-weight: 300;
+  color: #999;
+  margin: 0 0 15px 0;
+  margin-left: 140px;
+}
+
+#testimonials .testimonial-item p {
+  font-style: italic;
+  font-family: "Changa";
+  margin: 0 0 15px 140px;
+}
+
+@media (min-width: 992px) {
+  #testimonials .testimonial-item p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+
+  #testimonials .testimonial-item h3,
+  #testimonials .testimonial-item h4,
+  #testimonials .testimonial-item p {
+    margin-left: 0;
+  }
+}
+
+#testimonials .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+#testimonials .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #8C3333;
+}
+
+#testimonials .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #8C3333;
+}
+
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #8C3333;
+  color: #eee;
+  font-size: 14px;
+}
+
+#footer .footer-top {
+  padding: 60px 0 30px 0;
+}
+
+
+#footer .footer-top .footer-info h3 {
+  font-size: 20px;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-family: "Changa";
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact p {
+  line-height: 26px;
+  font-family: "Changa";
+}
+
+#footer .footer-top .social-links a {
+  font-size: 18px;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  background: #7A9D54;
+  color: #fff;
+  margin-right: 4px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+
+}
+
+#footer .footer-top .social-links a i {
+  line-height: 0;
+}
+
+#footer .footer-top .social-links a:hover {
+  background: #3C3C3C;
+  color: #fff;
+}
+
